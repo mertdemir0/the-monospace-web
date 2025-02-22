@@ -51,4 +51,4 @@ let's try also tree view with `tree` class.
 <ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
 
 * usr
-        *pro
+        *project
