@@ -5,6 +5,7 @@ author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
 thumbnail: /doc/img/
+thumbnail-text
 toc-title: Contents
 category: Demo
 ---
