@@ -1,6 +1,6 @@
 ---
 title: Home Page
-subtitle: This test page for JODM.
+subtitle: Journey of a distracted mind.
 author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
