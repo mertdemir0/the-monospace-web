@@ -76,7 +76,7 @@ let's try also tree view with `tree` class.
   <tr>
     <td>Science</td>
     <td>Science content</td>
-    <td>43°45'50.78"N 11°15'3.34"E</td>
+    <td>link</td>
   </tr>
   <tr>
     <td>Pyramid of Khafre</td>
