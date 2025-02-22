@@ -51,13 +51,13 @@ let's try also tree view with `tree` class.
 <ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
 
 * usr
-        *project_folder
-        *share
-        *data
-        *etc.
-        *src
-            *code
-            *docs
+      *project_folder
+      *share
+      *data
+      *etc.
+      *src
+          *code
+          *docs
 * .env
 
 </li></ul>
@@ -130,9 +130,4 @@ They extend to the width of the page, and add appropriate padding in the bottom 
 ## Discussion
 
 That's it for now.
-I've very much enjoyed making this, pushing my CSS chops and having a lot of fun with the design.
-If you like it or even decide to use it, please [let me know](https://x.com/owickstrom).
-
-The full source code is here: [github.com/owickstrom/the-monospace-web](https://github.com/owickstrom/the-monospace-web)
-
 Finally, a massive shout-out to [U.S. Graphics Company](https://x.com/usgraphics) for all the inspiration.
