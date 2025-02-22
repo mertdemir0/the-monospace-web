@@ -1,5 +1,5 @@
 ---
-title: First article
+title: Home Page
 subtitle: This test page for JODM.
 author: Mert Demir
 author-url: "https://mertdemir.org"
