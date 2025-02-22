@@ -4,6 +4,7 @@ subtitle: journey of a distracted mind.
 author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
+
 toc-title: Contents
 category: Demo
 ---
