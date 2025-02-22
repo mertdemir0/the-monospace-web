@@ -55,4 +55,7 @@ let's try also tree view with `tree` class.
         *share
         *data
         *etc.
-        *
+        *src
+            *code
+            *docs
+            
