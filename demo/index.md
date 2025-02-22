@@ -9,7 +9,8 @@ thumbnail-text: Home Page
 thumbnail-css: "outline"
 created: 2025-02-22
 modified: 2025-02-22
-status: 
+status: published
+importance: 
 toc-title: Contents
 category: Demo
 ---
