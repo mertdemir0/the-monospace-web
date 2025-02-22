@@ -67,7 +67,7 @@ let's try also tree view with `tree` class.
 <table>
 <thead>
   <tr>
-    <th class="width-min">Name</th>
+    <th class="width-min">Category</th>
     <th class="width-auto">Dimensions</th>
     <th class="width-min">Position</th>
   </tr>
