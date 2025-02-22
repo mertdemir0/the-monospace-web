@@ -52,4 +52,6 @@ let's try also tree view with `tree` class.
 
 * usr
         *project_folder
-        
+        *share
+        *data
+        *
