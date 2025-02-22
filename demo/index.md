@@ -12,7 +12,7 @@ modified: 2025-02-22
 status: published
 importance: 4
 confidence: likely
-css-extension: drop
+css-extension: dropcaps-kanzlei
 toc-title: Contents
 category: Demo
 ---
