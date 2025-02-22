@@ -115,3 +115,14 @@ To have it stand out a bit more, we can wrap it in a `<figure>` tag, and why not
 └───────┘ └───────┘ └───────┘</pre>
 <figcaption>Example: Message passing.</figcaption>
 </figure>
+
+
+## Media
+
+Media objects are supported, like images and video:
+
+![A room in an old French castle (2024)](castle.jpg)
+
+![[The Center of the Web (1914), Wikimedia](https://en.wikisource.org/wiki/Page:The_Center_of_the_Web_(1914).webm/11)](https://upload.wikimedia.org/wikipedia/commons/e/e0/The_Center_of_the_Web_%281914%29.webm)
+
+They extend to the width of the page, and add appropriate padding in the bottom to maintain the monospace grid.
