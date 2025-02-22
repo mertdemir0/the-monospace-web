@@ -1,0 +1,47 @@
+---
+title: First article
+subtitle: This test page for JODM.
+author: Mert Demir
+author-url: "https://mertdemir.org"
+lang: en
+toc-title: Contents
+---
+
+## About the Author
+I create this website with the help of [Jekyll](https://jekyllrb.com/), [JODM](https://jodm.org/), and [Pandoc](https://pandoc.org/).
+Idea behind this project is, releasing my distracted mind to the structured content.
+
+On this page, you can find various examples of what you can do with __JODM__. I hope you find it useful.
+
+## About the Site
+
+<hr>
+
+This is a test page for JODM.
+
+<details>
+<summary>Testing elements here. </summary>
+<p>More test elements here.</p>
+</details>
+
+## List elements
+
+Things i'm gonna write about
+
+* Data science
+* Machine learning
+* Artifical Intelligence
+* Neural Networks
+* Deep Learning
+* Natural Language Processing
+
+Other things with numbers:
+
+1. ADHD
+2. Self-development
+3. Programming
+4. Hobbies
+    1. Sports
+        1. Water sports
+        2. Basketball
+        3. etc.
