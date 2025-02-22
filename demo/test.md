@@ -54,4 +54,4 @@ let's try also tree view with `tree` class.
         *project_folder
         *share
         *data
-        *etc
+        *etc.
