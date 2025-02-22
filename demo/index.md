@@ -85,3 +85,33 @@ let's try also tree view with `tree` class.
   </tr>
 </tbody>
 </table>
+
+
+## ASCII Drawings
+
+We can draw in `<pre>` tags using [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_characters):
+
+```
+╭─────────────────╮
+│ MONOSPACE ROCKS │
+╰─────────────────╯
+```
+
+To have it stand out a bit more, we can wrap it in a `<figure>` tag, and why not also add a `<figcaption>`.
+
+<figure>
+<pre>
+┌───────┐ ┌───────┐ ┌───────┐
+│Actor 1│ │Actor 2│ │Actor 3│
+└───┬───┘ └───┬───┘ └───┬───┘
+    │         │         │    
+    │         │  msg 1  │    
+    │         │────────►│    
+    │         │         │    
+    │  msg 2  │         │    
+    │────────►│         │    
+┌───┴───┐ ┌───┴───┐ ┌───┴───┐
+│Actor 1│ │Actor 2│ │Actor 3│
+└───────┘ └───────┘ └───────┘</pre>
+<figcaption>Example: Message passing.</figcaption>
+</figure>
