@@ -126,3 +126,13 @@ Media objects are supported, like images and video:
 ![[The Center of the Web (1914), Wikimedia](https://en.wikisource.org/wiki/Page:The_Center_of_the_Web_(1914).webm/11)](https://upload.wikimedia.org/wikipedia/commons/e/e0/The_Center_of_the_Web_%281914%29.webm)
 
 They extend to the width of the page, and add appropriate padding in the bottom to maintain the monospace grid.
+
+## Discussion
+
+That's it for now.
+I've very much enjoyed making this, pushing my CSS chops and having a lot of fun with the design.
+If you like it or even decide to use it, please [let me know](https://x.com/owickstrom).
+
+The full source code is here: [github.com/owickstrom/the-monospace-web](https://github.com/owickstrom/the-monospace-web)
+
+Finally, a massive shout-out to [U.S. Graphics Company](https://x.com/usgraphics) for all the inspiration.
