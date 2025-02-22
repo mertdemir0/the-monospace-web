@@ -64,3 +64,24 @@ let's try also tree view with `tree` class.
 
 ## Table of contents
 
+<table>
+<thead>
+  <tr>
+    <th class="width-min">Name</th>
+    <th class="width-auto">Dimensions</th>
+    <th class="width-min">Position</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Boboli Obelisk</td>
+    <td>1.41m &times; 1.41m &times; 4.87m</td>
+    <td>43°45'50.78"N 11°15'3.34"E</td>
+  </tr>
+  <tr>
+    <td>Pyramid of Khafre</td>
+    <td>215.25m &times; 215.25m &times; 136.4m</td>
+    <td>29°58'34"N 31°07'51"E</td>
+  </tr>
+</tbody>
+</table>
