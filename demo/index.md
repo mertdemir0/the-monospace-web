@@ -62,15 +62,3 @@ let's try also tree view with `tree` class.
 
 </li></ul>
 
-another test for chart
-
-<figure><pre>
-
-|
-|
-|
-|
-|___________________________
-    idk     what    to  put
-
-</pre></figure>
