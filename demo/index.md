@@ -75,7 +75,7 @@ let's try also tree view with `tree` class.
 <tbody>
   <tr>
     <td>Science</td>
-    <td>1.41m &times; 1.41m &times; 4.87m</td>
+    <td>Science content</td>
     <td>43°45'50.78"N 11°15'3.34"E</td>
   </tr>
   <tr>
