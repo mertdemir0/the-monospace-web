@@ -1,6 +1,6 @@
 ---
 title: Home Page
-subtitle: Journey of a distracted mind.
+subtitle: journey of a distracted mind.
 author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
