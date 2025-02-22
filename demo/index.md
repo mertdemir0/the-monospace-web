@@ -6,6 +6,7 @@ author-url: "https://mertdemir.org"
 lang: en
 thumbnail: /doc/img/
 thumbnail-text: Home Page
+thumbnail-css
 toc-title: Contents
 category: Demo
 ---
