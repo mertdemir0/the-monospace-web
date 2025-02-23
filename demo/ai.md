@@ -1,5 +1,5 @@
 ---
-title: Neural Networks
+title: Artificial Intelligence
 subtitle: NN in Nutshell.
 author: Mert Demir
 author-url: "https://mertdemir.org"
