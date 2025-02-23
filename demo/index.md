@@ -105,7 +105,7 @@ let's try also tree view with `tree` class.
 </table>
 
 
-## Site 
+## Site structure
 
 ## ASCII Drawings
 
