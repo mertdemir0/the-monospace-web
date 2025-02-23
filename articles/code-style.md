@@ -40,34 +40,33 @@ In general DS projects i worked, you have to do some type of the jobs in any cas
 
 So my base folder structure goes like this;
 
-<ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
+<ul class="tree"><li><p style="margin: 0;"><strong>/dev/projectname</strong></p>
 
-* project_bane
-    * .venv
-    * .git
-    * .github
-        * workflows
-            * commit.yml
-            * main.yml
-    * config
-        * settings.json
-        * requirements.txt
-        * pyproject.toml
-        * config.yaml
-    * data
-    * docs
-        * API.md
-        * FAQ.md
-        * index.md
-    * logs
-    * models
-    * reports
-    * scripts
-    * src
-    * templates
-    * tests
-    * README.md
-    * LICENSE
-    * .gitignore
+* .venv
+* .git
+* .github
+    * workflows
+        * commit.yml
+        * main.yml
+* config
+    * settings.json
+    * requirements.txt
+    * pyproject.toml
+    * config.yaml
+* data
+* docs
+    * API.md
+    * FAQ.md
+    * index.md
+* logs
+* models
+* reports
+* scripts
+* src
+* templates
+* tests
+* README.md
+* LICENSE
+* .gitignore
 
 </li></ul>
