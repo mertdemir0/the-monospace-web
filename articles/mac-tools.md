@@ -19,16 +19,23 @@ category: Tools
 
 ## Productivity Tools
 
-# Espanso
+### Espanso
+keyboard shortcut tool
 
-# AltTab
+### AltTab
+shows alt-tab previews
 
-# Raycast
+### Raycast
+app starter
 
-# Keka
+### Keka
+file archiver
 
-# QuickLook
+### QuickLook
+quicklook plugin
 
-# Loop
+### Loop
+window size manager
 
-# Shortcat
+### Shortcat
+using pc without mouse
