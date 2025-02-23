@@ -51,6 +51,7 @@ Things i'm gonna write about
 - Machine learning
 - Artificial Intelligence
 - Neural Networks
+- Deep Learning
 
 
 Other things with numbers:
