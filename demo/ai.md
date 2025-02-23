@@ -17,4 +17,4 @@ toc-title: Contents
 category: Artificial Intelligence
 ---
 
-## Artificial Intelligence in Nutshell
+## Artificial Intelligence
