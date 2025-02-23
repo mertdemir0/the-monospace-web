@@ -14,5 +14,5 @@ importance: 4
 confidence: likely
 css-extension: dropcaps-kanzlei
 toc-title: Contents
-category: Neural Networks
+category: Artificial Intelligence
 ---
