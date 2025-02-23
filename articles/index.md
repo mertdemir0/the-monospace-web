@@ -27,7 +27,7 @@ On this page, you can find various examples of what you can do with __JODM__. I 
 
 <hr>
 
-This is a test page for JODM.
+First page of the website. Element lists.
 
 <details>
 <summary>Testing elements here. </summary>
@@ -45,8 +45,16 @@ Things i'm gonna write about
 * Deep Learning
 * Natural Language Processing
 
-Other things with numbers:
+## Topic List
 
+- Data science
+- Machine learning
+- Artificial Intelligence
+- Neural Networks
+- Deep Learning
+- Natural Language Processing
+Other things with numbers:
+<hr>
 1. ADHD
 2. Self-development
 3. Programming
@@ -96,6 +104,8 @@ let's try also tree view with `tree` class.
 </tbody>
 </table>
 
+
+## Site structure
 
 ## ASCII Drawings
 

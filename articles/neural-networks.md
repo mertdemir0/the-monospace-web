@@ -20,3 +20,5 @@ category: Neural Networks
 
 # Neural Networks in Nutshell
 I just wanna start to write about neural networks. I started to see a lot of articles about neural networks, and I just wanna get my hands dirty and show the "experts" what is really going on behind the neural networks/artificial intelligence.
+
+## Neural Networks

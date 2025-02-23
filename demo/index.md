@@ -54,7 +54,7 @@ Things i'm gonna write about
 - Deep Learning
 - Natural Language Processing
 Other things with numbers:
-
+<hr>
 1. ADHD
 2. Self-development
 3. Programming
