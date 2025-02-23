@@ -7,43 +7,43 @@ lang: en
 toc-title: Contents
 ---
 
-### Terminals Tools and Settings
+# Terminals Tools and Settings
 <br>
 
 ## Terminals
-# [Warp](https://warp.dev/)
+### [Warp](https://warp.dev/)
 
-# Windows Terminal
+### Windows Terminal
 
 ## Terminal Tools
-# [lazygit](https://github.com/jesseduffield/lazygit)
+### [lazygit](https://github.com/jesseduffield/lazygit)
 Started to use now i'll be update here
 
-# [uv](https://github.com/ekzhu/uv)
+### [uv](https://github.com/ekzhu/uv)
 Best python package management tool. Faster than any other tool exists.
 
-# [harlequin](https://github.com/bootandy/harlequin)
+### [harlequin](https://github.com/bootandy/harlequin)
 Easy db browser
 
 
-# [yazi](https://github.com/bootandy/yazi)
+### [yazi](https://github.com/bootandy/yazi)
 
 Customized file management system
 
 ## Terminal Settings
 
-# [zsh](https://github.com/ohmyzsh/ohmyzsh)
-# [prezto](https://github.com/sorin-ionescu/prezto)
+### [zsh](https://github.com/ohmyzsh/ohmyzsh)
+### [prezto](https://github.com/sorin-ionescu/prezto)
 
 
-### IDEs
+## IDEs
 
-# Windsurf
+### Windsurf
 
-# [Visual Studio Code](https://code.visualstudio.com/)
+### [Visual Studio Code](https://code.visualstudio.com/)
 
-# Cursor 
+### Cursor 
 
-### Extra Tools
+## Extra Tools
 
-# Gitkrakens
+### Gitkrakens

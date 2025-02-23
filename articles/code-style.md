@@ -24,7 +24,7 @@ I'm gonna write about how i made my coding experience more structured less menta
 ## Structure of the project
 first structuring the imports. When the projects getting bigger in every file you have to go through them and import them. This is very time consuming and error prone. So I created a `import.py` file. This file is just a collection of imports, and it's used to import the project as a whole.
 
-# Folder Structure
+## Folder Structure
 
 After when you start the project i need to create my folder structure. I already created a boilerplate for all of my projects.
 
