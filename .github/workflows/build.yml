@@ -36,5 +36,5 @@ jobs:
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           local_source_dir: ./deploy/
-          dist_target_dir: "/"
+          dist_target_dir: "/public_html/"
           delete: "false"
