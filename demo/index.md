@@ -47,6 +47,10 @@ Things i'm gonna write about
 
 ## Topic List
 
+- Data science
+- Machine learning
+- Artificial Intelligence
+- Neural Networks
 
 Other things with numbers:
 
