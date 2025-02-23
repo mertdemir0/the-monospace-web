@@ -45,7 +45,8 @@ Things i'm gonna write about
 * Deep Learning
 * Natural Language Processing
 
-## Topic
+## Topic List
+
 
 Other things with numbers:
 
