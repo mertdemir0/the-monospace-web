@@ -45,6 +45,8 @@ Things i'm gonna write about
 * Deep Learning
 * Natural Language Processing
 
+
+
 Other things with numbers:
 
 1. ADHD
