@@ -27,7 +27,7 @@ On this page, you can find various examples of what you can do with __JODM__. I 
 
 <hr>
 
-This is a test page for JODM.
+First page of the website. Element lists.
 
 <details>
 <summary>Testing elements here. </summary>
