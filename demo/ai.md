@@ -1,6 +1,6 @@
 ---
 title: Artificial Intelligence
-subtitle: NN in Nutshell.
+subtitle: AI in Nutshell.
 author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
