@@ -5,7 +5,7 @@ author: Mert Demir
 author-url: "https://mertdemir.org"
 lang: en
 thumbnail: /doc/img/
-thumbnail-text: Neural Networks
+thumbnail-text: Artificial Intelligence
 thumbnail-css: "outline"
 created: 2025-02-22
 modified: 2025-02-22
