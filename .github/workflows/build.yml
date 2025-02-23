@@ -21,9 +21,8 @@ jobs:
           
       - name: Build site
         run: |
-          nix --extra-experimental-features nix-command --extra-experimental-features flakes develop # -c make
-          make
-      
+          nix develop --command make
+          
       - name: Prepare deployment
         run: |
           mkdir -p deploy
