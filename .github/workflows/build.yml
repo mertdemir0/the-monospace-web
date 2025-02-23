@@ -30,13 +30,11 @@ jobs:
           cp -r img deploy/
           
       - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./deploy/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          port: 21
-          protocol: ftp
-          security: loose # try this if your FTP server doesn't support FTPS
+          ftp_host: ${{ secrets.FTP_SERVER }}
+          ftp_username: ${{ secrets.FTP_USERNAME }}
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          local_source_dir: ./deploy/
+          dist_target_dir: ${{ secrets.FTP_SERVER_DIR }}
+          delete: "false"
