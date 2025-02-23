@@ -22,7 +22,7 @@ I'm gonna write about how i made my coding experience more structured less menta
 
 first structuring the imports. When the projects getting bigger in every file you have to go through them and import them. This is very time consuming and error prone. So I created a `import.projectname` file. This file is just a collection of imports, and it's used to import the project as a whole.
 
-```
+```python
 
 import pandas as pd
 import numpy as np
@@ -39,6 +39,8 @@ It's a base folder it's not specified about any specific project, but it's a goo
 In general DS projects i worked, you have to do some type of the jobs in any case, like data collection, creating storage systems, data cleaning, etc. etc.
 
 So my base folder structure goes like this;
+
+<ul class="tree"><li><p style="margin: 0;"><strong>/dev/nvme0n1p2</strong></p>
 
 * project_bane
     * .venv
@@ -67,3 +69,5 @@ So my base folder structure goes like this;
     * README.md
     * LICENSE
     * .gitignore
+
+</li></ul>
