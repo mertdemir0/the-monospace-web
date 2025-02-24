@@ -111,8 +111,6 @@ In every project you don't need to know what to write and how to write but you n
 
 <figure>
 <pre>
-```python
-
 def data_cleaning():
     insert here import function for your dataset
     check your data types
@@ -142,9 +140,9 @@ def main():
     pass
 
 if __name__ == "__main__":
-    main()
-
-``` <pre>
+    main()</pre>
+<figcaption> Code structure </figcaption>
+</figure>
 
 
 Even throwing the ideas like this to a draft document will give you a better understanding how the code works and where do you want to go.
