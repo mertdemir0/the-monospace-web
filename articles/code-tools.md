@@ -8,7 +8,7 @@ toc-title: Contents
 ---
 
 # Terminals Tools and Settings
-<br>
+<hr>
 
 ## Terminals
 ### [Warp](https://warp.dev/)

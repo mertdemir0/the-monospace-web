@@ -19,4 +19,4 @@ category: Tools
 
 I'm gonna write about some small tools I use on a daily basis. Some of them are old, some of them are new and some of them are just for fun and for sure i need to remember in the future so here they are.
 
-<br>
+<hr>

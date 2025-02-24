@@ -32,7 +32,7 @@ It's a base folder it's not specified about any specific project, but it's a goo
 
 In general DS projects i worked, you have to do some type of the jobs in any case, like data collection, creating storage systems, data cleaning, etc. etc.
 
-<br>
+<hr>
 
 So my base folder structure goes like this;
 
@@ -51,15 +51,48 @@ So my base folder structure goes like this;
     * pyproject.toml
     * config.yaml
 * data
+    * raw
+    * processed
+    * external
 * docs
     * API.md
     * FAQ.md
     * index.md
+    * architecture.md
+    * changelog.md
+    * CONTRIBUTING.md
+    * database_schema.md
+    * requirements.md
+    * user_guide.md
+    * visual_guide.md
 * logs
+    * mlrun_logs
 * models
+    * lstm_model.h5
+    * rnn_model.h5
+    * .
+    * .
 * reports
 * scripts
 * src
+    * __init__.py
+    * __pycache__
+    * analysis
+    * data
+    * data_collection
+    * data_ingestion
+    * data_processing
+    * database
+    * deployment
+    * models
+    * monitoring
+    * optimization
+    * preprocessing
+    * training
+    * utils
+    * visualization
+    * config.py
+    * main.py
 * templates
 * tests
 * README.md
