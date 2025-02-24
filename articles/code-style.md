@@ -108,6 +108,9 @@ I'm gonna share my full folder structure with .zip file. [You can download the f
 
 In every project you don't need to know what to write and how to write but you need to understand your idea well. When you understand the logic of your idea you can start to build your code structure. (Not really coding just throwing the idea of your system). In general it looks like this for me:
 
+
+
+
 ```python
 
 def data_cleaning():
