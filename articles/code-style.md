@@ -100,3 +100,47 @@ So my base folder structure goes like this;
 * .gitignore
 
 </li></ul>
+
+I'm gonna share my full folder structure with .zip file. [You can download the full folder structure here.](https://journeyofadistractedmind.org/articles/code-style.zip).
+
+
+## Coding Style 
+
+In every project you don't need to know what to write and how to write but you need to understand your idea well. When you understand the logic of your idea you can start to build your code structure. (Not really coding just throwing the idea of your system). In general it looks like this for me:
+
+```python
+
+def data_cleaning():
+    insert here import function for your dataset
+    check your data types
+    drop unnecessary columns
+    check for missing values
+    fill missing values
+    check for duplicates
+    save your cleaned dataset
+    pass
+
+def data_preparation():
+    transform date format
+    encode categorical variables
+    scale numerical variables
+
+def train_model():
+    choose the right model
+    split your data into train and test
+    train the model
+    evaluate the model
+    save your trained model
+
+def main():
+    data_cleaning()
+    data_preparation()
+    train_model()
+    pass
+
+if __name__ == "__main__":
+    main()
+
+```
+
+Even throwing the ideas like this to a draft document will give you a better understanding how the code works and where do you want to go.
