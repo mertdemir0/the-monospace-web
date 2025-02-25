@@ -55,13 +55,13 @@ $if(math)$
 $endif$
 </head>
 <body>
+  <!-- Popup Container -->
+  <div id="popup-container"></div>
 $for(include-before)$
 $include-before$
 $endfor$
 
 <main>
-  <a id="skip-to-content-link" href="#markdownBody">Skip to main content</a>
-
   <article>
     <header>
       <table class="header">
@@ -85,8 +85,6 @@ $endfor$
         </tr>
       </table>
     </header>
-
-    <label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label>
 
     <div class="landing-container">
       <div class="main-content" id="markdownBody">
