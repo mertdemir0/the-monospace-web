@@ -57,94 +57,27 @@ $endfor$
 </table>
 
 <div class="landing-container">
-  <aside class="left-sidebar">
-    <nav class="toc sidebar-box">
-      <h3>$toc-title$</h3>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#recent">Recent Updates</a></li>
-        <li><a href="#categories">Categories</a></li>
-      </ul>
-    </nav>
-    
-    <div class="sidebar-box">
-      <h3>Recent Updates</h3>
-      <ul class="recent-updates">
-$for(articles)$
-$if(recent)$
-        <li>
-          <time datetime="$date$">$date$</time>
-          <a href="$url$" class="confidence-$confidence$">$title$</a>
-$if(subtitle)$
-          <span class="subtitle">$subtitle$</span>
-$endif$
-          <span class="category">$category$</span>
-        </li>
-$endif$
-$endfor$
-      </ul>
-    </div>
-
-    <div class="sidebar-box">
-      <h3>Featured Articles</h3>
-      <ul class="important-articles">
-$for(articles)$
-        <li>
-          <a href="$url$" class="confidence-$confidence$">$title$</a>
-          <span class="category">$category$</span>
-        </li>
-$endfor$
-      </ul>
-    </div>
-  </aside>
-
   <main class="main-content">
     <section id="about">
       <h2>About</h2>
       $about$
     </section>
 
-    <section id="recent">
-      <h2>Recent Updates</h2>
-      <ul class="article-list">
-$for(articles)$
-$if(recent)$
-        <li>
-          <time datetime="$date$">$date$</time>
-          <a href="$url$" class="confidence-$confidence$">$title$</a>
-$if(subtitle)$
-          <span class="subtitle">$subtitle$</span>
-$endif$
-          <span class="category">$category$</span>
-        </li>
-$endif$
-$endfor$
-      </ul>
-    </section>
-
     <section id="categories">
       <h2>Articles by Category</h2>
+      <div class="category-list">
 $for(categories)$
-      <div class="category-section" id="$name$">
-        <h3>$name$</h3>
-        <ul>
+        <div class="category-section">
+          <h3>$name$</h3>
+          <ul>
 $for(articles)$
-$if(category)$$if(category=name)$
-          <li>
-            <time datetime="$date$">$date$</time>
-            <a href="$url$" class="confidence-$confidence$">$title$</a>
-$if(subtitle)$
-            <span class="subtitle">$subtitle$</span>
-$endif$
-          </li>
-$endif$$endif$
+            <li><a href="$url$" class="confidence-$confidence$">$title$</a></li>
 $endfor$
-        </ul>
+          </ul>
+        </div>
+$endfor$
       </div>
-$endfor$
     </section>
-
-    $body$
   </main>
 
   <aside class="right-sidebar">
@@ -154,27 +87,6 @@ $endfor$
         <li><a href="https://github.com/mertdemir0">GitHub</a></li>
         <li><a href="$author-url$">Website</a></li>
         <li><a href="feed.xml">RSS Feed</a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-box">
-      <h3>Categories</h3>
-      <ul>
-$for(categories)$
-        <li>
-          <a href="#$name$">$name$</a>
-          <span class="article-count">($for(articles)$$if(category)$$if(category=name)$x$endif$$endif$$endfor$)</span>
-        </li>
-$endfor$
-      </ul>
-    </div>
-
-    <div class="sidebar-box">
-      <h3>Article Stats</h3>
-      <ul>
-        <li>Total Articles: $for(articles)$x$endfor$</li>
-        <li>Categories: $for(categories)$x$endfor$</li>
-        <li>Recent Updates: $for(articles)$$if(recent)$x$endif$$endfor$</li>
       </ul>
     </div>
   </aside>
