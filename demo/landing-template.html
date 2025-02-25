@@ -73,15 +73,15 @@ $endfor$
 $for(articles)$
 $if(it.recent)$
         <li>
-          <time datetime="$it.date$">$it.date$</time>
-          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
+          <time datetime="{{ it.date }}">{{ it.date }}</time>
+          <a href="{{ it.url }}" class="confidence-{{ it.confidence }}">{{ it.title }}</a>
 $if(it.subtitle)$
-          <span class="subtitle">$it.subtitle$</span>
+          <span class="subtitle">{{ it.subtitle }}</span>
 $endif$
 $if(it.importance)$
-          <span class="importance">[$it.importance$]</span>
+          <span class="importance">[{{ it.importance }}]</span>
 $endif$
-          <span class="category">$it.category$</span>
+          <span class="category">{{ it.category }}</span>
         </li>
 $endif$
 $endfor$
@@ -95,9 +95,9 @@ $for(articles)$
 $if(it.importance)$
 $if(it.importance >= 8)$
         <li>
-          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
-          <span class="importance">[$it.importance$]</span>
-          <span class="category">$it.category$</span>
+          <a href="{{ it.url }}" class="confidence-{{ it.confidence }}">{{ it.title }}</a>
+          <span class="importance">[{{ it.importance }}]</span>
+          <span class="category">{{ it.category }}</span>
         </li>
 $endif$
 $endif$
@@ -118,15 +118,15 @@ $endfor$
 $for(articles)$
 $if(it.recent)$
         <li>
-          <time datetime="$it.date$">$it.date$</time>
-          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
+          <time datetime="{{ it.date }}">{{ it.date }}</time>
+          <a href="{{ it.url }}" class="confidence-{{ it.confidence }}">{{ it.title }}</a>
 $if(it.subtitle)$
-          <span class="subtitle">$it.subtitle$</span>
+          <span class="subtitle">{{ it.subtitle }}</span>
 $endif$
 $if(it.importance)$
-          <span class="importance">[$it.importance$]</span>
+          <span class="importance">[{{ it.importance }}]</span>
 $endif$
-          <span class="category">$it.category$</span>
+          <span class="category">{{ it.category }}</span>
         </li>
 $endif$
 $endfor$
@@ -136,20 +136,22 @@ $endfor$
     <section id="categories">
       <h2>Articles by Category</h2>
 $for(categories)$
-      <div class="category-section" id="$it.name$">
-        <h3>$it.name$$if(it.importance)$ <span class="importance">[$it.importance$]</span>$endif$</h3>
+      <div class="category-section" id="{{ it.name }}">
+        <h3>{{ it.name }}$if(it.importance)$ <span class="importance">[{{ it.importance }}]</span>$endif$</h3>
         <ul>
-$for(it.articles)$
+$for(articles)$
+$if(it.category == it.name)$
           <li>
-            <time datetime="$date$">$date$</time>
-            <a href="$url$" class="confidence-$confidence$">$title$</a>
-$if(subtitle)$
-            <span class="subtitle">$subtitle$</span>
+            <time datetime="{{ it.date }}">{{ it.date }}</time>
+            <a href="{{ it.url }}" class="confidence-{{ it.confidence }}">{{ it.title }}</a>
+$if(it.subtitle)$
+            <span class="subtitle">{{ it.subtitle }}</span>
 $endif$
-$if(importance)$
-            <span class="importance">[$importance$]</span>
+$if(it.importance)$
+            <span class="importance">[{{ it.importance }}]</span>
 $endif$
           </li>
+$endif$
 $endfor$
         </ul>
       </div>
@@ -174,11 +176,11 @@ $endfor$
       <ul>
 $for(categories)$
         <li>
-          <a href="#$it.name$">$it.name$</a>
+          <a href="#{{ it.name }}">{{ it.name }}</a>
 $if(it.importance)$
-          <span class="importance">[$it.importance$]</span>
+          <span class="importance">[{{ it.importance }}]</span>
 $endif$
-          <span class="article-count">($for(it.articles)$x$endfor$)</span>
+          <span class="article-count">($for(articles)$x$endfor$)</span>
         </li>
 $endfor$
       </ul>
