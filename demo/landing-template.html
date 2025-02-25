@@ -93,7 +93,7 @@ $endfor$
       <ul class="important-articles">
 $for(articles)$
 $if(importance)$
-$if(importance >= 8)$
+$if(it.importance > 7)$
         <li>
           <a href="$url$" class="confidence-$confidence$">$title$</a>
           <span class="importance">[$importance$]</span>
@@ -140,7 +140,7 @@ $for(categories)$
         <h3>$name$$if(importance)$ <span class="importance">[$importance$]</span>$endif$</h3>
         <ul>
 $for(articles)$
-$if(category == $name)$
+$if(category == "$name$")$
           <li>
             <time datetime="$date$">$date$</time>
             <a href="$url$" class="confidence-$confidence$">$title$</a>
@@ -180,7 +180,7 @@ $for(categories)$
 $if(importance)$
           <span class="importance">[$importance$]</span>
 $endif$
-          <span class="article-count">($for(articles)$if(category == $name)$x$endif$$endfor$)</span>
+          <span class="article-count">($for(articles)$$if(category == "$name$")$x$endif$$endfor$)</span>
         </li>
 $endfor$
       </ul>
