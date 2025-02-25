@@ -78,9 +78,6 @@ $if(recent)$
 $if(subtitle)$
           <span class="subtitle">$subtitle$</span>
 $endif$
-$if(importance)$
-          <span class="importance">[$importance$]</span>
-$endif$
           <span class="category">$category$</span>
         </li>
 $endif$
@@ -89,18 +86,13 @@ $endfor$
     </div>
 
     <div class="sidebar-box">
-      <h3>Most Important</h3>
+      <h3>Featured Articles</h3>
       <ul class="important-articles">
 $for(articles)$
-$if(importance)$
-$if(it.importance > 7)$
         <li>
           <a href="$url$" class="confidence-$confidence$">$title$</a>
-          <span class="importance">[$importance$]</span>
           <span class="category">$category$</span>
         </li>
-$endif$
-$endif$
 $endfor$
       </ul>
     </div>
@@ -123,9 +115,6 @@ $if(recent)$
 $if(subtitle)$
           <span class="subtitle">$subtitle$</span>
 $endif$
-$if(importance)$
-          <span class="importance">[$importance$]</span>
-$endif$
           <span class="category">$category$</span>
         </li>
 $endif$
@@ -137,7 +126,7 @@ $endfor$
       <h2>Articles by Category</h2>
 $for(categories)$
       <div class="category-section" id="$name$">
-        <h3>$name$$if(importance)$ <span class="importance">[$importance$]</span>$endif$</h3>
+        <h3>$name$</h3>
         <ul>
 $for(articles)$
 $if(category == "$name$")$
@@ -146,9 +135,6 @@ $if(category == "$name$")$
             <a href="$url$" class="confidence-$confidence$">$title$</a>
 $if(subtitle)$
             <span class="subtitle">$subtitle$</span>
-$endif$
-$if(importance)$
-            <span class="importance">[$importance$]</span>
 $endif$
           </li>
 $endif$
@@ -177,9 +163,6 @@ $endfor$
 $for(categories)$
         <li>
           <a href="#$name$">$name$</a>
-$if(importance)$
-          <span class="importance">[$importance$]</span>
-$endif$
           <span class="article-count">($for(articles)$$if(category == "$name$")$x$endif$$endfor$)</span>
         </li>
 $endfor$
