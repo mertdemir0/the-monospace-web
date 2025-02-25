@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="src/reset.css" />
+  <link rel="stylesheet" href="src/colors.css" />
+  <link rel="stylesheet" href="src/colors-dark-GENERATED.css" />
+  <link rel="stylesheet" href="src/dark-mode-GENERATED.css" />
+  <link rel="stylesheet" href="src/dark-mode-adjustments.css" />
+  <link rel="stylesheet" href="src/light-mode-GENERATED.css" />
+  <link rel="stylesheet" href="src/light-mode-adjustments.css" />
+  <link rel="stylesheet" href="src/initial.css" />
+  <link rel="stylesheet" href="src/landing.css" />
+  
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+</head>
+<body>
+  <!-- Popup Container -->
+  <div id="popup-container"></div>
+
+  <main>
+    <div class="container">
+      <div class="main-content" id="markdownBody">
+        $if(about)$
+        <section id="about">
+          <h2>About</h2>
+          $about$
+        </section>
+        $endif$
+
+        <section id="categories">
+          <h2>Articles by Category</h2>
+          <div class="categories-grid">
+$for(categories)$
+            <div class="category-section">
+              <h3>$name$</h3>
+              <ul>
+$for(articles)$
+                <li>
+                  <a href="$url$" class="article-link confidence-$confidence$" data-category="$category$">
+                    <span class="article-title">$title$</span>
+                    $if(subtitle)$
+                    <span class="article-subtitle">$subtitle$</span>
+                    $endif$
+                    $if(date)$
+                    <span class="article-date">$date$</span>
+                    $endif$
+                  </a>
+                </li>
+$endfor$
+              </ul>
+            </div>
+$endfor$
+          </div>
+        </section>
+      </div>
+
+      <aside class="right-sidebar">
+        <div class="sidebar-box">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://github.com/mertdemir0">GitHub</a></li>
+            <li><a href="$author-url$">Website</a></li>
+            <li><a href="feed.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>Last updated: <time style="white-space: pre;">$date$</time> • <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • <a href="$author-url$">Contact</a></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="src/utility.js"></script>
+  <script src="src/initial.js"></script>
+  <script src="src/landing.js"></script>
+</body>
+</html>
