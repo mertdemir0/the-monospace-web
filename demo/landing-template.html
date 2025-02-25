@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <link rel="stylesheet" href="src/reset.css" />
+  <link rel="stylesheet" href="src/index.css" />
+  <link rel="stylesheet" href="src/landing.css" />
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+  $math$
+$endif$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+
+<table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <h1 class="title">$title$</h1>
+      <span class="subtitle">$subtitle$</span>
+    </td>
+    <th>Version</th>
+    <td class="width-min">$version$</td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td class="width-min"><time style="white-space: pre;">$date$</time></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="$author-url$"><cite>$author$</cite></a></td>
+    <th class="width-min">Status</th>
+    <td>$status$</td>
+  </tr>
+</table>
+
+<div class="landing-container">
+  <aside class="left-sidebar">
+    <nav class="toc sidebar-box">
+      <h3>$toc-title$</h3>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#recent">Recent Updates</a></li>
+        <li><a href="#categories">Categories</a></li>
+      </ul>
+    </nav>
+    
+    <div class="sidebar-box">
+      <h3>Recent Updates</h3>
+      <ul class="recent-updates">
+      $for(articles)$
+      $if(it.recent)$
+        <li>
+          <time>$it.date$</time>
+          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
+          $if(it.subtitle)$
+          <span class="subtitle">$it.subtitle$</span>
+          $endif$
+          $if(it.importance)$
+          <span class="importance">[$it.importance$]</span>
+          $endif$
+          <span class="category">$it.category$</span>
+        </li>
+      $endif$
+      $endfor$
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Most Important</h3>
+      <ul class="important-articles">
+      $for(articles)$
+      $if(it.importance >= 8)$
+        <li>
+          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
+          <span class="importance">[$it.importance$]</span>
+          <span class="category">$it.category$</span>
+        </li>
+      $endif$
+      $endfor$
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section id="about">
+      <h2>About</h2>
+      $about$
+    </section>
+
+    <section id="recent">
+      <h2>Recent Updates</h2>
+      <ul class="article-list">
+      $for(articles)$
+      $if(it.recent)$
+        <li>
+          <time class="article-date">$it.date$</time>
+          <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
+          $if(it.subtitle)$
+          <span class="subtitle">$it.subtitle$</span>
+          $endif$
+          $if(it.importance)$
+          <span class="importance">[$it.importance$]</span>
+          $endif$
+          <span class="category">$it.category$</span>
+        </li>
+      $endif$
+      $endfor$
+      </ul>
+    </section>
+
+    <section id="categories">
+      <h2>Articles by Category</h2>
+      $for(categories)$
+      <div class="category-section" id="$it.name$">
+        <h3>
+          $it.name$
+          $if(it.importance)$
+          <span class="importance">[$it.importance$]</span>
+          $endif$
+        </h3>
+        <ul>
+        $for(it.articles)$
+          <li>
+            <time class="article-date">$date$</time>
+            <a href="$url$" class="confidence-$confidence$">$title$</a>
+            $if(subtitle)$
+            <span class="subtitle">$subtitle$</span>
+            $endif$
+            $if(importance)$
+            <span class="importance">[$importance$]</span>
+            $endif$
+          </li>
+        $endfor$
+        </ul>
+      </div>
+      $endfor$
+    </section>
+
+    $body$
+  </main>
+
+  <aside class="right-sidebar">
+    <div class="sidebar-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="https://github.com/mertdemir0">GitHub</a></li>
+        <li><a href="$author-url$">Website</a></li>
+        <li><a href="feed.xml">RSS Feed</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Categories</h3>
+      <ul>
+      $for(categories)$
+        <li>
+          <a href="#$it.name$">$it.name$</a>
+          $if(it.importance)$
+          <span class="importance">[$it.importance$]</span>
+          $endif$
+          <span class="article-count">(${length(it.articles)})</span>
+        </li>
+      $endfor$
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Article Stats</h3>
+      <ul>
+        <li>Total Articles: ${length(articles)}</li>
+        <li>Categories: ${length(categories)}</li>
+        <li>Recent Updates: ${length(filter(articles, "recent"))}</li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>
+    Last updated: <time>$date$</time> • 
+    <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • 
+    <a href="$author-url$">Contact</a>
+  </p>
+</footer>
+
+<div class="debug-grid"></div>
+<script src="src/index.js"></script>
+</body>
+</html>

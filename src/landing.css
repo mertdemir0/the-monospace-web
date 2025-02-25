@@ -1,0 +1,292 @@
+/* Landing page specific styles */
+:root {
+  --column-width: 35rem;
+  --gap-width: 2rem;
+  --side-width: 15rem;
+  --font-serif: "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --line-height: 1.6;
+  --text-color-alt: #666;
+  --background-color: #f9f9f9;
+  --background-color-alt: #f2f2f2;
+  --border-thickness: 1px;
+  --link-color: #337ab7;
+  --link-hover-color: #23527c;
+}
+
+/* Base typography */
+body {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: var(--line-height);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Layout */
+.landing-container {
+  display: grid;
+  grid-template-columns: var(--side-width) var(--column-width) var(--side-width);
+  gap: var(--gap-width);
+  margin: 0 auto;
+  max-width: calc(var(--side-width) * 2 + var(--column-width) + var(--gap-width) * 2);
+  padding: 0 1rem;
+}
+
+@media (max-width: 1400px) {
+  .landing-container {
+    grid-template-columns: var(--side-width) var(--column-width);
+  }
+  .right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-container {
+    grid-template-columns: 100%;
+  }
+  .left-sidebar {
+    display: none;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+
+.main-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.left-sidebar {
+  grid-column: 1;
+}
+
+.right-sidebar {
+  grid-column: 3;
+}
+
+/* Category sections */
+.category-section {
+  margin-bottom: var(--line-height);
+  padding: 1.5rem;
+  border-left: 3px solid var(--text-color-alt);
+  background: var(--background-color);
+}
+
+.category-section h3 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-color-alt);
+}
+
+.category-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-section li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.category-section .article-date {
+  font-family: var(--font-mono);
+  color: var(--text-color-alt);
+  font-size: 0.85em;
+  margin-right: 1ch;
+}
+
+/* Article metadata */
+.subtitle {
+  display: block;
+  color: var(--text-color-alt);
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.importance {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--text-color-alt);
+  margin-left: 0.5em;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Confidence levels */
+.confidence-likely {
+  border-bottom: 2px solid #4CAF50;
+}
+
+.confidence-possible {
+  border-bottom: 2px solid #FFC107;
+}
+
+.confidence-unlikely {
+  border-bottom: 2px solid #F44336;
+}
+
+/* Sidebar components */
+.sidebar-box {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--background-color-alt);
+  border: var(--border-thickness) solid var(--text-color-alt);
+  font-family: var(--font-sans);
+}
+
+.sidebar-box h3 {
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-box li {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Recent updates */
+.recent-updates {
+  font-size: 0.9rem;
+}
+
+.recent-updates time {
+  font-family: var(--font-mono);
+  color: var(--text-color-alt);
+  display: block;
+  font-size: 0.85em;
+}
+
+/* Table of contents */
+.toc {
+  position: sticky;
+  top: 1rem;
+}
+
+.toc ul {
+  border-left: 2px solid var(--text-color-alt);
+  padding-left: 1rem;
+}
+
+.toc li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: var(--border-thickness) solid var(--text-color-alt);
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-color-alt);
+}
+
+/* Category labels */
+.category {
+  font-family: var(--font-sans);
+  font-size: 0.8em;
+  color: var(--text-color-alt);
+  background: var(--background-color-alt);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  margin-left: 0.5em;
+}
+
+/* Article count */
+.article-count {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--text-color-alt);
+  margin-left: 0.5em;
+}
+
+/* Important articles section */
+.important-articles {
+  font-size: 0.9rem;
+}
+
+.important-articles li {
+  margin-bottom: 0.75rem;
+}
+
+.important-articles .importance {
+  color: #e91e63;
+}
+
+/* Article list in main content */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--text-color-alt);
+}
+
+.article-list li:last-child {
+  border-bottom: none;
+}
+
+/* Article stats */
+.article-stats li {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+/* Category headers with importance */
+.category-section h3 .importance {
+  font-size: 0.8em;
+  vertical-align: super;
+  margin-left: 0.5em;
+}
