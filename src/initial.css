@@ -11,7 +11,25 @@
 
     --GW-body-max-width: 935px;
     --GW-body-side-padding: 20px;
+
+    /* Colors */
+    --GW-body-background-color: #ffffff;
+    --GW-body-text-color: #000000;
+    --GW-link-color: #0645ad;
+    --GW-link-visited-color: #0b0080;
+    --GW-link-hover-color: #3366bb;
+
+    /* Popup Variables */
+    --GW-popup-background-color: var(--GW-body-background-color);
+    --GW-popup-text-color: var(--GW-body-text-color);
+    --GW-popup-border-color: #ccc;
+    --GW-popup-box-shadow-color: rgba(0, 0, 0, 0.2);
+    --GW-popup-title-bar-background-color: #f5f5f5;
+    --GW-popup-title-bar-text-color: var(--GW-body-text-color);
+    --GW-popup-title-bar-button-color: #666;
+    --GW-popup-title-bar-button-hover-color: #333;
 }
+
 @media all and (max-width: 649px) {
     :root {
         --GW-body-text-font-size: 18px;
