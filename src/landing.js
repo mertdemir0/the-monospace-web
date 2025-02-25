@@ -1,27 +1,97 @@
 // Landing page specific functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize any landing page specific functionality here
+    // Initialize popups
+    initializePopups();
+    
     // Initialize URL guessing functionality
     initializeURLGuessing();
 });
 
-// Initialize popups when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize popup system
-    Popups.setup();
+// Initialize popups
+function initializePopups() {
+    // Add popup functionality to all article links
+    document.querySelectorAll('.article-link').forEach(link => {
+        link.addEventListener('mouseenter', function(e) {
+            const title = this.querySelector('.article-title')?.textContent || '';
+            const subtitle = this.querySelector('.article-subtitle')?.textContent || '';
+            const date = this.querySelector('.article-date')?.textContent || '';
+            const category = this.dataset.category || '';
+            const confidence = this.classList.contains('confidence-high') ? 'High' :
+                             this.classList.contains('confidence-medium') ? 'Medium' : 'Low';
+            
+            // Create popup content
+            const content = `
+                <div class="popup-content">
+                    <h3>${title}</h3>
+                    ${subtitle ? `<p class="subtitle">${subtitle}</p>` : ''}
+                    ${date ? `<p class="date">${date}</p>` : ''}
+                    ${category ? `<p class="category">Category: ${category}</p>` : ''}
+                    ${confidence ? `<p class="confidence">Confidence: ${confidence}</p>` : ''}
+                </div>
+            `;
+            
+            // Position and show popup
+            showPopup(content, e);
+        });
 
-    // Add popup functionality to all links
-    document.querySelectorAll('a').forEach(link => {
-        if (!link.closest('.sidebar-box') && !link.closest('footer')) {
-            Popups.addTarget(link, () => {
-                return {
-                    url: link.href,
-                    title: link.textContent
-                };
-            });
-        }
+        link.addEventListener('mouseleave', hidePopup);
     });
-});
+}
+
+// Show popup with content
+function showPopup(content, event) {
+    let popup = document.querySelector('.popup');
+    if (!popup) {
+        popup = document.createElement('div');
+        popup.className = 'popup';
+        document.getElementById('popup-container').appendChild(popup);
+    }
+
+    // Set content and position
+    popup.innerHTML = content;
+    positionPopup(popup, event);
+    
+    // Show with fade effect
+    popup.style.opacity = '0';
+    popup.style.display = 'block';
+    setTimeout(() => popup.style.opacity = '1', 10);
+}
+
+// Position popup relative to mouse/target
+function positionPopup(popup, event) {
+    const rect = event.target.getBoundingClientRect();
+    const popupRect = popup.getBoundingClientRect();
+    
+    let left = rect.left;
+    let top = rect.bottom + 10;
+
+    // Keep popup within viewport
+    if (left + popupRect.width > window.innerWidth) {
+        left = window.innerWidth - popupRect.width - 10;
+    }
+    if (top + popupRect.height > window.innerHeight) {
+        top = rect.top - popupRect.height - 10;
+    }
+
+    // Ensure popup stays within viewport bounds
+    left = Math.max(10, Math.min(left, window.innerWidth - popupRect.width - 10));
+    top = Math.max(10, Math.min(top, window.innerHeight - popupRect.height - 10));
+
+    popup.style.left = `${left}px`;
+    popup.style.top = `${top}px`;
+}
+
+// Hide popup
+function hidePopup() {
+    const popup = document.querySelector('.popup');
+    if (popup) {
+        popup.style.opacity = '0';
+        setTimeout(() => {
+            popup.style.display = 'none';
+            popup.innerHTML = '';
+        }, 250);
+    }
+}
 
 // URL guessing functionality
 function initializeURLGuessing() {

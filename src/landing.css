@@ -13,6 +13,13 @@
   --border-thickness: 1px;
   --link-color: #337ab7;
   --link-hover-color: #23527c;
+  --text-color: var(--GW-body-text-color);
+  --GW-body-text-color: #333;
+  --GW-body-background-color: #f9f9f9;
+  --GW-blockquote-background-color-level-one: #f2f2f2;
+  --GW-link-color: #337ab7;
+  --GW-link-hover-color: #23527c;
+  --GW-abstract-border-color: #ddd;
 }
 
 /* Base typography */
@@ -210,10 +217,30 @@ a:hover {
     padding: 0.5rem;
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    position: relative;
+    display: inline-block;
 }
 
 .article-link:hover {
     background-color: var(--background-color-alt);
+}
+
+.article-link:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--link-hover-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.article-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .article-title {
@@ -384,4 +411,88 @@ footer {
   font-size: 0.8em;
   vertical-align: super;
   margin-left: 0.5em;
+}
+
+/* Popup styling */
+#popup-container {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.popup {
+    position: absolute;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
+}
+
+.popup-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: var(--background-color-alt);
+    border-bottom: 1px solid var(--border-color);
+    cursor: move;
+}
+
+.popup-content {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+
+.popup-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+.popup-content p {
+    margin: 0.25rem 0;
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+.popup-content .subtitle {
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.popup-content .date {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.85em;
+}
+
+.popup-content .category {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.popup-content .confidence {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.85em;
+}
+
+.popup-close {
+    cursor: pointer;
+    padding: 0.25rem;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.popup-close:hover {
+    opacity: 1;
 }
