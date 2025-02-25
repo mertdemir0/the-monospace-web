@@ -46,7 +46,7 @@ $endfor$
   </tr>
   <tr>
     <th>Updated</th>
-    <td class="width-min"><time style="white-space: pre;">$date$</time></td>
+    <td class="width-min"><time datetime="$date$">$date$</time></td>
   </tr>
   <tr>
     <th class="width-min">Author</th>
@@ -70,36 +70,38 @@ $endfor$
     <div class="sidebar-box">
       <h3>Recent Updates</h3>
       <ul class="recent-updates">
-      $for(articles)$
-      $if(it.recent)$
+$for(articles)$
+$if(it.recent)$
         <li>
-          <time>$it.date$</time>
+          <time datetime="$it.date$">$it.date$</time>
           <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
-          $if(it.subtitle)$
+$if(it.subtitle)$
           <span class="subtitle">$it.subtitle$</span>
-          $endif$
-          $if(it.importance)$
+$endif$
+$if(it.importance)$
           <span class="importance">[$it.importance$]</span>
-          $endif$
+$endif$
           <span class="category">$it.category$</span>
         </li>
-      $endif$
-      $endfor$
+$endif$
+$endfor$
       </ul>
     </div>
 
     <div class="sidebar-box">
       <h3>Most Important</h3>
       <ul class="important-articles">
-      $for(articles)$
-      $if(it.importance >= 8)$
+$for(articles)$
+$if(it.importance)$
+$if(it.importance >= 8)$
         <li>
           <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
           <span class="importance">[$it.importance$]</span>
           <span class="category">$it.category$</span>
         </li>
-      $endif$
-      $endfor$
+$endif$
+$endif$
+$endfor$
       </ul>
     </div>
   </aside>
@@ -113,50 +115,45 @@ $endfor$
     <section id="recent">
       <h2>Recent Updates</h2>
       <ul class="article-list">
-      $for(articles)$
-      $if(it.recent)$
+$for(articles)$
+$if(it.recent)$
         <li>
-          <time class="article-date">$it.date$</time>
+          <time datetime="$it.date$">$it.date$</time>
           <a href="$it.url$" class="confidence-$it.confidence$">$it.title$</a>
-          $if(it.subtitle)$
+$if(it.subtitle)$
           <span class="subtitle">$it.subtitle$</span>
-          $endif$
-          $if(it.importance)$
+$endif$
+$if(it.importance)$
           <span class="importance">[$it.importance$]</span>
-          $endif$
+$endif$
           <span class="category">$it.category$</span>
         </li>
-      $endif$
-      $endfor$
+$endif$
+$endfor$
       </ul>
     </section>
 
     <section id="categories">
       <h2>Articles by Category</h2>
-      $for(categories)$
+$for(categories)$
       <div class="category-section" id="$it.name$">
-        <h3>
-          $it.name$
-          $if(it.importance)$
-          <span class="importance">[$it.importance$]</span>
-          $endif$
-        </h3>
+        <h3>$it.name$$if(it.importance)$ <span class="importance">[$it.importance$]</span>$endif$</h3>
         <ul>
-        $for(it.articles)$
+$for(it.articles)$
           <li>
-            <time class="article-date">$date$</time>
+            <time datetime="$date$">$date$</time>
             <a href="$url$" class="confidence-$confidence$">$title$</a>
-            $if(subtitle)$
+$if(subtitle)$
             <span class="subtitle">$subtitle$</span>
-            $endif$
-            $if(importance)$
+$endif$
+$if(importance)$
             <span class="importance">[$importance$]</span>
-            $endif$
+$endif$
           </li>
-        $endfor$
+$endfor$
         </ul>
       </div>
-      $endfor$
+$endfor$
     </section>
 
     $body$
@@ -175,15 +172,15 @@ $endfor$
     <div class="sidebar-box">
       <h3>Categories</h3>
       <ul>
-      $for(categories)$
+$for(categories)$
         <li>
           <a href="#$it.name$">$it.name$</a>
-          $if(it.importance)$
+$if(it.importance)$
           <span class="importance">[$it.importance$]</span>
-          $endif$
+$endif$
           <span class="article-count">($for(it.articles)$x$endfor$)</span>
         </li>
-      $endfor$
+$endfor$
       </ul>
     </div>
 
@@ -199,11 +196,7 @@ $endfor$
 </div>
 
 <footer>
-  <p>
-    Last updated: <time>$date$</time> • 
-    <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • 
-    <a href="$author-url$">Contact</a>
-  </p>
+  <p>Last updated: <time datetime="$date$">$date$</time> • <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • <a href="$author-url$">Contact</a></p>
 </footer>
 
 <div class="debug-grid"></div>
