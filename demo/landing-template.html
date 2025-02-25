@@ -99,14 +99,28 @@ $endfor$
 
         <section id="categories">
           <h2>Articles by Category</h2>
+          <div class="categories-grid">
 $for(categories)$
-          <h3>$name$</h3>
-          <ul>
+            <div class="category-section">
+              <h3>$name$</h3>
+              <ul>
 $for(articles)$
-            <li><a href="$url$" class="confidence-$confidence$">$title$</a>$if(subtitle)$ — $subtitle$$endif$</li>
+                <li>
+                  <a href="$url$" class="article-link confidence-$confidence$" data-category="$category$">
+                    <span class="article-title">$title$</span>
+                    $if(subtitle)$
+                    <span class="article-subtitle">$subtitle$</span>
+                    $endif$
+                    $if(date)$
+                    <span class="article-date">$date$</span>
+                    $endif$
+                  </a>
+                </li>
 $endfor$
-          </ul>
+              </ul>
+            </div>
 $endfor$
+          </div>
         </section>
       </div>
 

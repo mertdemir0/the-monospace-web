@@ -5,6 +5,7 @@ author: Mert Demir
 author-url: "https://journeyofadistractedmind.com"
 lang: en
 toc-title: Contents
+category: Automation
 ---
 
 ## Introduction
