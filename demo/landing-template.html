@@ -181,7 +181,7 @@ $endfor$
           $if(it.importance)$
           <span class="importance">[$it.importance$]</span>
           $endif$
-          <span class="article-count">(${length(it.articles)})</span>
+          <span class="article-count">($for(it.articles)$x$endfor$)</span>
         </li>
       $endfor$
       </ul>
@@ -190,9 +190,9 @@ $endfor$
     <div class="sidebar-box">
       <h3>Article Stats</h3>
       <ul>
-        <li>Total Articles: ${length(articles)}</li>
-        <li>Categories: ${length(categories)}</li>
-        <li>Recent Updates: ${length(filter(articles, "recent"))}</li>
+        <li>Total Articles: $for(articles)$x$endfor$</li>
+        <li>Categories: $for(categories)$x$endfor$</li>
+        <li>Recent Updates: $for(articles)$$if(it.recent)$x$endif$$endfor$</li>
       </ul>
     </div>
   </aside>
