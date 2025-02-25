@@ -129,7 +129,7 @@ $for(categories)$
         <h3>$name$</h3>
         <ul>
 $for(articles)$
-$if(category == "$name$")$
+$if(category)$$if(category=name)$
           <li>
             <time datetime="$date$">$date$</time>
             <a href="$url$" class="confidence-$confidence$">$title$</a>
@@ -137,7 +137,7 @@ $if(subtitle)$
             <span class="subtitle">$subtitle$</span>
 $endif$
           </li>
-$endif$
+$endif$$endif$
 $endfor$
         </ul>
       </div>
@@ -163,7 +163,7 @@ $endfor$
 $for(categories)$
         <li>
           <a href="#$name$">$name$</a>
-          <span class="article-count">($for(articles)$$if(category == "$name$")$x$endif$$endfor$)</span>
+          <span class="article-count">($for(articles)$$if(category)$$if(category=name)$x$endif$$endif$$endfor$)</span>
         </li>
 $endfor$
       </ul>
