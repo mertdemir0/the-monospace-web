@@ -46,7 +46,7 @@ $endfor$
   </tr>
   <tr>
     <th>Updated</th>
-    <td class="width-min"><time datetime="$date$">$date$</time></td>
+    <td class="width-min"><time style="white-space: pre;">$date$</time></td>
   </tr>
   <tr>
     <th class="width-min">Author</th>
@@ -56,27 +56,27 @@ $endfor$
   </tr>
 </table>
 
+<label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label>
+
 <div class="landing-container">
   <main class="main-content">
+    $if(about)$
     <section id="about">
       <h2>About</h2>
       $about$
     </section>
+    $endif$
 
     <section id="categories">
       <h2>Articles by Category</h2>
-      <div class="category-list">
 $for(categories)$
-        <div class="category-section">
-          <h3>$name$</h3>
-          <ul>
+      <h3>$name$</h3>
+      <ul>
 $for(articles)$
-            <li><a href="$url$" class="confidence-$confidence$">$title$</a></li>
+        <li><a href="$url$" class="confidence-$confidence$">$title$</a>$if(subtitle)$ — $subtitle$$endif$</li>
 $endfor$
-          </ul>
-        </div>
+      </ul>
 $endfor$
-      </div>
     </section>
   </main>
 
@@ -93,10 +93,15 @@ $endfor$
 </div>
 
 <footer>
-  <p>Last updated: <time datetime="$date$">$date$</time> • <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • <a href="$author-url$">Contact</a></p>
+  <p>Last updated: <time style="white-space: pre;">$date$</time> • <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • <a href="$author-url$">Contact</a></p>
 </footer>
 
+<div id="popup-container"></div>
 <div class="debug-grid"></div>
+<script src="src/initial.js"></script>
+<script src="src/svg.js"></script>
 <script src="src/index.js"></script>
+<script src="src/popups.js"></script>
+<script src="src/landing.js"></script>
 </body>
 </html>
