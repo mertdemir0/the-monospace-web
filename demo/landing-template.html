@@ -5,88 +5,26 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-$for(author-meta)$
-  <meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$" />
-$endif$
-$if(keywords)$
-  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
-$endif$
-$if(description-meta)$
-  <meta name="description" content="$description-meta$" />
-$endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-
+  
   <!-- Core CSS -->
   <link rel="stylesheet" href="src/reset.css" />
-  <link rel="stylesheet" href="src/initial-fonts-GENERATED.css" />
-  <link rel="stylesheet" href="src/fonts-GENERATED.css" />
-  <link rel="stylesheet" href="src/fonts-VERSIONED.css" />
   <link rel="stylesheet" href="src/colors.css" />
   <link rel="stylesheet" href="src/colors-dark-GENERATED.css" />
   <link rel="stylesheet" href="src/dark-mode-GENERATED.css" />
   <link rel="stylesheet" href="src/dark-mode-adjustments.css" />
   <link rel="stylesheet" href="src/light-mode-GENERATED.css" />
   <link rel="stylesheet" href="src/light-mode-adjustments.css" />
-  <link rel="stylesheet" href="src/links.css" />
-  <link rel="stylesheet" href="src/default.css" />
   <link rel="stylesheet" href="src/initial.css" />
-  <link rel="stylesheet" href="src/inlined-images-initial-GENERATED.css" />
-  <link rel="stylesheet" href="src/inlined-images-GENERATED.css" />
-  <link rel="stylesheet" href="src/reader-mode-initial.css" />
-  <link rel="stylesheet" href="src/special-occasions.css" />
-  <!--link rel="stylesheet" href="src/head-GENERATED.css" /-->
-  <link rel="stylesheet" href="src/head-VERSIONED.css" />
-  <!--link rel="stylesheet" href="src/style-GENERATED.css" /-->
-  <link rel="stylesheet" href="src/style-VERSIONED.css" />
-  <link rel="stylesheet" href="src/index.css" />
   <link rel="stylesheet" href="src/landing.css" />
-$for(css)$
-  <link rel="stylesheet" href="$css$" />
-$endfor$
-$for(header-includes)$
-  $header-includes$
-$endfor$
-$if(math)$
-  $math$
-$endif$
+  
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 </head>
 <body>
   <!-- Popup Container -->
   <div id="popup-container"></div>
-$for(include-before)$
-$include-before$
-$endfor$
 
-<main>
-  <article>
-    <header>
-      <table class="header">
-        <tr>
-          <td colspan="2" rowspan="2" class="width-auto">
-            <h1 class="title">$title$</h1>
-            <span class="subtitle">$subtitle$</span>
-          </td>
-          <th>Version</th>
-          <td class="width-min">$version$</td>
-        </tr>
-        <tr>
-          <th>Updated</th>
-          <td class="width-min"><time style="white-space: pre;">$date$</time></td>
-        </tr>
-        <tr>
-          <th class="width-min">Author</th>
-          <td class="width-auto"><a href="$author-url$"><cite>$author$</cite></a></td>
-          <th class="width-min">Status</th>
-          <td>$status$</td>
-        </tr>
-      </table>
-    </header>
-
-    <div class="landing-container">
+  <main>
+    <div class="container">
       <div class="main-content" id="markdownBody">
         $if(about)$
         <section id="about">
@@ -133,53 +71,15 @@ $endfor$
         </div>
       </aside>
     </div>
-  </article>
+  </main>
 
   <footer>
     <p>Last updated: <time style="white-space: pre;">$date$</time> • <a href="https://github.com/mertdemir0/the-monospace-web">Source</a> • <a href="$author-url$">Contact</a></p>
   </footer>
-</main>
 
-<div class="debug-grid"></div>
-
-<div id="popup-container"></div>
-
-<!-- JavaScript Dependencies -->
-<script src="src/utility.js"></script>
-<script src="src/initial.js"></script>
-<script src="src/color.js"></script>
-<script src="src/dark-mode-initial.js"></script>
-<script src="src/dark-mode.js"></script>
-<script src="src/reader-mode-initial.js"></script>
-<script src="src/reader-mode.js"></script>
-<script src="src/typography.js"></script>
-<script src="src/layout.js"></script>
-<script src="src/console.js"></script>
-<script src="src/misc.js"></script>
-<script src="src/content.js"></script>
-<script src="src/collapse.js"></script>
-<script src="src/annotations.js"></script>
-<script src="src/popins.js"></script>
-<script src="src/popups.js"></script>
-<script src="src/image-focus.js"></script>
-<script src="src/sidenotes.js"></script>
-<script src="src/tablesorter.js"></script>
-<script src="src/rewrite.js"></script>
-<script src="src/404-guesser.js"></script>
-<script src="src/Hyphenopoly_Loader.js"></script>
-<script src="src/Hyphenopoly.js"></script>
-<script src="src/extracts.js"></script>
-<script src="src/extracts-annotations.js"></script>
-<script src="src/extracts-content.js"></script>
-<script src="src/extracts-load.js"></script>
-<script src="src/extracts-options.js"></script>
-<script src="src/special-occasions.js"></script>
-<script src="src/transclude.js"></script>
-<script src="src/transclude-templates-GENERATED.js"></script>
-<script src="src/asset-versions-GENERATED.js"></script>
-<script src="src/head-GENERATED.js"></script>
-<script src="src/script-GENERATED.js"></script>
-<script src="src/index.js"></script>
-<script src="src/landing.js"></script>
+  <!-- JavaScript -->
+  <script src="src/utility.js"></script>
+  <script src="src/initial.js"></script>
+  <script src="src/landing.js"></script>
 </body>
 </html>
