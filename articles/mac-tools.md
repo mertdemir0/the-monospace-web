@@ -39,3 +39,26 @@ window size manager
 
 ### Shortcat
 using pc without mouse
+
+### DeepL
+Best translation solution i find useful
+
+### DockDoor
+
+
+
+### flux
+save your eyes.
+
+### OneSwitch
+
+### Parsec
+remote connection tool
+
+### Popclip
+
+### Raycast
+
+### Rcmd
+
+### 
