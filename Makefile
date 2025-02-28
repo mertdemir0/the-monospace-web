@@ -15,6 +15,9 @@ clean:
 docs/%.html: articles/%.md demo/template.html Makefile
 	pandoc --toc -s --css src/reset.css --css src/index.css -Vversion=v$(VERSION) -Vdate=$(DATE) -i $< -o $@ --template=demo/template.html
 
+docs/index.html: demo/index.html
+	cp demo/index.html docs/index.html
+
 #docs/index.html: demo/landing-template.html scripts/collect-articles.lua Makefile $(MD_FILES)
 #	pandoc --toc -s --css src/reset.css --css src/index.css --css src/landing.css \
 #		-Vversion=v$(VERSION) -Vdate=$(DATE) \
