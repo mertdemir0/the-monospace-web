@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPopup = null;
     let popupTimeout = null;
 
+    // Function to escape HTML special characters
+    function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, function(match) {
+            const escapeMap = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            };
+            return escapeMap[match];
+        });
+    }
+
     // Create popup element
     function createPopup(content, x, y) {
         const popup = document.createElement('div');
@@ -59,11 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create popup content
         const content = `
-            <h3>${title}</h3>
-            ${subtitle ? `<p class="subtitle">${subtitle}</p>` : ''}
-            ${date ? `<p class="date">${date}</p>` : ''}
-            ${category ? `<p class="category">Category: ${category}</p>` : ''}
-            ${confidence ? `<p class="confidence">Confidence: ${confidence}</p>` : ''}
+            <h3>${escapeHTML(title)}</h3>
+            ${subtitle ? `<p class="subtitle">${escapeHTML(subtitle)}</p>` : ''}
+            ${date ? `<p class="date">${escapeHTML(date)}</p>` : ''}
+            ${category ? `<p class="category">Category: ${escapeHTML(category)}</p>` : ''}
+            ${confidence ? `<p class="confidence">Confidence: ${escapeHTML(confidence)}</p>` : ''}
         `;
 
         currentPopup = createPopup(content, x, y);
